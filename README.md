@@ -1,22 +1,36 @@
-# Running the local backend server
+## Modern Angular With Signals Course
 
-In order to be able to provide more realistic examples, we will need in our playground a small REST API backend server. 
+This repository contains the code for the [Modern Angular With Signals Course](https://angular-university.io/course/angular-signals-course), updated to Angular 18.
 
-We can start the sample application backend with the following command:
+# Installation
 
-    npm run server
+1. Clone the repository:
 
-# To run the Frontend Server
+   ```
+   git clone https://github.com/angular-university/angular-signals-course.git
+   cd angular-signals-course
+   ```
 
-To run the frontend part of our code, we will use the Angular CLI:
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-    npm start
+# Running the application
 
-You can also start the frontend application using the following command:
+1. Start the backend server:
 
-    ng serve
+   ```
+   npm run server
+   ```
 
-The application is visible in port 4200: [http://localhost:4200](http://localhost:4200)
+2. Start the frontend application:
+   ```
+   npm start
+   ```
+   or
+   ```
+   ng serve
+   ```
 
-
-
+The application will be available at [http://localhost:4200](http://localhost:4200)
