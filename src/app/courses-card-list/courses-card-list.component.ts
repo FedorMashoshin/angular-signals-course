@@ -15,6 +15,7 @@ import { openEditCourseDialog } from '../edit-course-dialog/edit-course-dialog.c
 })
 export class CoursesCardListComponent {
   courses = input.required<Course[]>();
+  courseUpdated = output<Course>();
   dialog = inject(MatDialog);
 
   async editCourse(course: Course) {
@@ -23,5 +24,6 @@ export class CoursesCardListComponent {
       title: 'Edit Course',
       course
     });
+    this.courseUpdated.emit(result);
   }
 }

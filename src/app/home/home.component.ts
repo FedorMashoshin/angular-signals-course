@@ -43,4 +43,10 @@ export class HomeComponent {
       console.error(error);
     }
   }
+
+  onCourseUpdated(course: Course) {
+    const courses = this.#courses();
+    const newCourses = courses.map(c => c.id === course.id ? course : c);
+    this.#courses.set(newCourses);
+  }
 }
