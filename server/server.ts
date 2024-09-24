@@ -1,4 +1,3 @@
-
 import express from 'express';
 import { Application } from "express";
 import { getAllCourses, getCourseById } from "./get-courses.route";
@@ -34,7 +33,11 @@ app.route('/api/courses/:id').delete(deleteCourse);
 app.route('/api/lessons/:id').put(saveLesson);
 
 app.route('/api/login').post(loginUser);
-
 const httpServer = app.listen(9000, () => {
-  console.log("HTTP REST API Server running at http://localhost:" + httpServer.address()["port"]);
+  const address = httpServer.address();
+  if (address && typeof address !== 'string') {
+    console.log("HTTP REST API Server running at http://localhost:" + address.port);
+  } else {
+    console.error("Failed to start server: invalid address");
+  }
 });
